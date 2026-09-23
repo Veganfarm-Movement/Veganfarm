@@ -1,0 +1,1103 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>VEGANFARM | Animal & Human Welfare Movement</title>
+
+    <meta name="description"
+        content="VEGANFARM is an independent animal and human welfare movement established in 2025, supporting animal rescuers across India and providing free online English education to students in aashrams in Mumbai and Virar.">
+
+    <meta name="author" content="Harshit Dedhia">
+
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        :root {
+            --green: #087f5b;
+            --green-dark: #055c43;
+            --green-light: #eaf8f3;
+            --blue: #087fd9;
+            --text: #14201c;
+            --muted: #65716d;
+            --white: #ffffff;
+            --light: #f7faf9;
+            --border: #e3ebe8;
+            --shadow: 0 20px 60px rgba(12, 48, 38, 0.10);
+        }
+
+        html {
+            scroll-behavior: smooth;
+        }
+
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, "Segoe UI",
+                Roboto, Helvetica, Arial, sans-serif;
+            color: var(--text);
+            background: var(--white);
+            line-height: 1.6;
+        }
+
+        a {
+            text-decoration: none;
+            color: inherit;
+        }
+
+        img {
+            max-width: 100%;
+            display: block;
+        }
+
+        .container {
+            width: min(1180px, 92%);
+            margin: auto;
+        }
+
+        /* NAVIGATION */
+
+        header {
+            position: sticky;
+            top: 0;
+            z-index: 1000;
+            background: rgba(255,255,255,0.94);
+            backdrop-filter: blur(18px);
+            border-bottom: 1px solid rgba(227,235,232,0.8);
+        }
+
+        nav {
+            height: 78px;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+        }
+
+        .brand {
+            display: flex;
+            align-items: center;
+            gap: 12px;
+            font-weight: 800;
+            letter-spacing: -0.5px;
+            font-size: 20px;
+        }
+
+        .brand-mark {
+            width: 42px;
+            height: 42px;
+            border-radius: 12px;
+            background: linear-gradient(135deg, #0785df, #08a89b);
+            display: grid;
+            place-items: center;
+            color: white;
+            font-weight: 900;
+            font-size: 17px;
+        }
+
+        .nav-links {
+            display: flex;
+            align-items: center;
+            gap: 28px;
+            font-size: 14px;
+            font-weight: 600;
+            color: #46534f;
+        }
+
+        .nav-links a:hover {
+            color: var(--green);
+        }
+
+        .nav-button {
+            background: var(--green);
+            color: white !important;
+            padding: 11px 18px;
+            border-radius: 999px;
+        }
+
+        .menu-btn {
+            display: none;
+            border: 0;
+            background: transparent;
+            font-size: 28px;
+            cursor: pointer;
+        }
+
+        /* HERO */
+
+        .hero {
+            position: relative;
+            overflow: hidden;
+            padding: 105px 0 95px;
+            background:
+                radial-gradient(circle at 85% 20%, rgba(8,127,217,0.12), transparent 28%),
+                radial-gradient(circle at 15% 80%, rgba(8,165,144,0.10), transparent 30%),
+                linear-gradient(180deg, #ffffff 0%, #f6fbf9 100%);
+        }
+
+        .hero-grid {
+            display: grid;
+            grid-template-columns: 1.15fr 0.85fr;
+            align-items: center;
+            gap: 70px;
+        }
+
+        .eyebrow {
+            display: inline-flex;
+            align-items: center;
+            gap: 8px;
+            padding: 7px 13px;
+            background: var(--green-light);
+            color: var(--green-dark);
+            border-radius: 999px;
+            font-size: 13px;
+            font-weight: 700;
+            margin-bottom: 22px;
+        }
+
+        .eyebrow span {
+            width: 7px;
+            height: 7px;
+            background: #08a879;
+            border-radius: 50%;
+        }
+
+        .hero h1 {
+            font-size: clamp(48px, 7vw, 82px);
+            line-height: 0.98;
+            letter-spacing: -4px;
+            margin-bottom: 24px;
+        }
+
+        .hero h1 .accent {
+            background: linear-gradient(90deg, #087fd9, #08a58f, #7351d9);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+        }
+
+        .hero-subtitle {
+            font-size: 21px;
+            color: #4e5d58;
+            max-width: 680px;
+            margin-bottom: 32px;
+        }
+
+        .hero-buttons {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 13px;
+        }
+
+        .btn {
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            padding: 14px 22px;
+            border-radius: 12px;
+            font-weight: 700;
+            font-size: 15px;
+            transition: 0.25s ease;
+        }
+
+        .btn-primary {
+            background: var(--green);
+            color: white;
+            box-shadow: 0 10px 25px rgba(8,127,91,0.18);
+        }
+
+        .btn-primary:hover {
+            transform: translateY(-2px);
+            background: var(--green-dark);
+        }
+
+        .btn-secondary {
+            background: white;
+            color: var(--text);
+            border: 1px solid var(--border);
+        }
+
+        .btn-secondary:hover {
+            transform: translateY(-2px);
+            box-shadow: var(--shadow);
+        }
+
+        .hero-card {
+            position: relative;
+            min-height: 440px;
+            border-radius: 32px;
+            background:
+                linear-gradient(145deg, rgba(255,255,255,0.95), rgba(234,248,243,0.95));
+            border: 1px solid var(--border);
+            box-shadow: var(--shadow);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            overflow: hidden;
+        }
+
+        .hero-card::before {
+            content: "";
+            position: absolute;
+            width: 280px;
+            height: 280px;
+            background: rgba(8,127,217,0.10);
+            border-radius: 50%;
+            top: -80px;
+            right: -70px;
+        }
+
+        .hero-card::after {
+            content: "";
+            position: absolute;
+            width: 230px;
+            height: 230px;
+            background: rgba(8,165,144,0.10);
+            border-radius: 50%;
+            bottom: -80px;
+            left: -70px;
+        }
+
+        .hero-logo {
+            position: relative;
+            z-index: 2;
+            width: 260px;
+            max-height: 260px;
+            object-fit: contain;
+        }
+
+        /* SECTIONS */
+
+        section {
+            padding: 95px 0;
+        }
+
+        .section-label {
+            color: var(--green);
+            font-size: 13px;
+            font-weight: 800;
+            text-transform: uppercase;
+            letter-spacing: 1.5px;
+            margin-bottom: 12px;
+        }
+
+        .section-title {
+            font-size: clamp(34px, 5vw, 52px);
+            line-height: 1.08;
+            letter-spacing: -2px;
+            margin-bottom: 18px;
+        }
+
+        .section-description {
+            color: var(--muted);
+            max-width: 720px;
+            font-size: 17px;
+        }
+
+        .section-heading {
+            margin-bottom: 48px;
+        }
+
+        /* ABOUT */
+
+        .about {
+            background: #fff;
+        }
+
+        .about-grid {
+            display: grid;
+            grid-template-columns: 0.9fr 1.1fr;
+            gap: 70px;
+            align-items: center;
+        }
+
+        .about-visual {
+            min-height: 420px;
+            border-radius: 30px;
+            background:
+                linear-gradient(135deg, #e9f8f2, #eef6ff);
+            border: 1px solid var(--border);
+            position: relative;
+            overflow: hidden;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+
+        .about-circle {
+            width: 250px;
+            height: 250px;
+            border-radius: 50%;
+            background: linear-gradient(135deg, #087fd9, #08a58f);
+            opacity: 0.95;
+            display: grid;
+            place-items: center;
+            color: white;
+            font-size: 30px;
+            font-weight: 900;
+            box-shadow: 0 30px 70px rgba(8,127,217,0.20);
+        }
+
+        .about-text p {
+            color: var(--muted);
+            font-size: 17px;
+            margin-bottom: 18px;
+        }
+
+        .founder-card {
+            margin-top: 28px;
+            padding: 20px;
+            border: 1px solid var(--border);
+            border-radius: 18px;
+            background: #fbfdfc;
+        }
+
+        .founder-card strong {
+            display: block;
+            font-size: 18px;
+        }
+
+        .founder-card span {
+            color: var(--muted);
+            font-size: 14px;
+        }
+
+        /* PROJECTS */
+
+        .projects {
+            background: var(--light);
+        }
+
+        .project-grid {
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            gap: 25px;
+        }
+
+        .project-card {
+            background: white;
+            border: 1px solid var(--border);
+            border-radius: 26px;
+            padding: 34px;
+            transition: 0.3s ease;
+            box-shadow: 0 8px 30px rgba(12,48,38,0.04);
+        }
+
+        .project-card:hover {
+            transform: translateY(-6px);
+            box-shadow: var(--shadow);
+        }
+
+        .project-icon {
+            width: 58px;
+            height: 58px;
+            border-radius: 17px;
+            display: grid;
+            place-items: center;
+            font-size: 26px;
+            margin-bottom: 24px;
+        }
+
+        .icon-rescue {
+            background: #fff1ed;
+        }
+
+        .icon-education {
+            background: #eef5ff;
+        }
+
+        .project-card h3 {
+            font-size: 28px;
+            margin-bottom: 12px;
+            letter-spacing: -1px;
+        }
+
+        .project-card p {
+            color: var(--muted);
+            margin-bottom: 22px;
+        }
+
+        .project-list {
+            list-style: none;
+            display: grid;
+            gap: 10px;
+            margin-bottom: 26px;
+        }
+
+        .project-list li {
+            color: #46534f;
+            font-size: 14px;
+            padding-left: 22px;
+            position: relative;
+        }
+
+        .project-list li::before {
+            content: "✓";
+            position: absolute;
+            left: 0;
+            color: var(--green);
+            font-weight: 800;
+        }
+
+        /* HOW HELP */
+
+        .help-grid {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 20px;
+        }
+
+        .help-card {
+            padding: 28px;
+            border-radius: 22px;
+            background: white;
+            border: 1px solid var(--border);
+        }
+
+        .help-number {
+            color: var(--green);
+            font-size: 13px;
+            font-weight: 900;
+            margin-bottom: 20px;
+        }
+
+        .help-card h3 {
+            font-size: 20px;
+            margin-bottom: 10px;
+        }
+
+        .help-card p {
+            color: var(--muted);
+            font-size: 15px;
+        }
+
+        /* CONTACT */
+
+        .contact {
+            background: #09261f;
+            color: white;
+        }
+
+        .contact-grid {
+            display: grid;
+            grid-template-columns: 1fr 0.8fr;
+            gap: 60px;
+            align-items: center;
+        }
+
+        .contact .section-label {
+            color: #66d6b4;
+        }
+
+        .contact .section-title {
+            color: white;
+        }
+
+        .contact .section-description {
+            color: #b8c9c4;
+        }
+
+        .email-box {
+            padding: 30px;
+            border-radius: 22px;
+            background: rgba(255,255,255,0.07);
+            border: 1px solid rgba(255,255,255,0.12);
+        }
+
+        .email-label {
+            color: #9bb1aa;
+            font-size: 13px;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+            margin-bottom: 8px;
+        }
+
+        .email {
+            font-size: clamp(18px, 3vw, 27px);
+            font-weight: 700;
+            color: white;
+            word-break: break-word;
+        }
+
+        /* FOOTER */
+
+        footer {
+            background: #061a15;
+            color: #aabcb7;
+            padding: 30px 0;
+        }
+
+        .footer-inner {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            gap: 20px;
+        }
+
+        .footer-brand {
+            color: white;
+            font-weight: 800;
+        }
+
+        .footer-small {
+            font-size: 13px;
+        }
+
+        /* MOBILE */
+
+        @media (max-width: 900px) {
+
+            .nav-links {
+                position: absolute;
+                top: 78px;
+                left: 0;
+                right: 0;
+                background: white;
+                display: none;
+                flex-direction: column;
+                align-items: stretch;
+                padding: 20px 5%;
+                border-bottom: 1px solid var(--border);
+                gap: 5px;
+            }
+
+            .nav-links.active {
+                display: flex;
+            }
+
+            .nav-links a {
+                padding: 13px 0;
+            }
+
+            .nav-button {
+                text-align: center;
+            }
+
+            .menu-btn {
+                display: block;
+            }
+
+            .hero {
+                padding: 70px 0;
+            }
+
+            .hero-grid,
+            .about-grid,
+            .contact-grid {
+                grid-template-columns: 1fr;
+            }
+
+            .hero-card {
+                min-height: 330px;
+            }
+
+            .hero-logo {
+                width: 220px;
+            }
+
+            .project-grid {
+                grid-template-columns: 1fr;
+            }
+
+            .help-grid {
+                grid-template-columns: 1fr;
+            }
+        }
+
+        @media (max-width: 600px) {
+
+            nav {
+                height: 68px;
+            }
+
+            .nav-links {
+                top: 68px;
+            }
+
+            .brand-mark {
+                width: 37px;
+                height: 37px;
+            }
+
+            .brand {
+                font-size: 17px;
+            }
+
+            .hero h1 {
+                font-size: 53px;
+                letter-spacing: -3px;
+            }
+
+            .hero-subtitle {
+                font-size: 18px;
+            }
+
+            section {
+                padding: 70px 0;
+            }
+
+            .project-card {
+                padding: 26px;
+            }
+
+            .footer-inner {
+                flex-direction: column;
+                align-items: flex-start;
+            }
+        }
+    </style>
+</head>
+
+<body>
+
+    <!-- NAVIGATION -->
+
+    <header>
+        <div class="container">
+            <nav>
+
+                <a href="#home" class="brand">
+                    <div class="brand-mark">VF</div>
+                    <span>VEGANFARM</span>
+                </a>
+
+                <button class="menu-btn" id="menuBtn" aria-label="Open menu">
+                    ☰
+                </button>
+
+                <div class="nav-links" id="navLinks">
+                    <a href="#about">About</a>
+                    <a href="#projects">Projects</a>
+                    <a href="#help">How You Can Help</a>
+                    <a href="#updates">Updates</a>
+                    <a href="#contact" class="nav-button">Contact</a>
+                </div>
+
+            </nav>
+        </div>
+    </header>
+
+
+    <!-- HERO -->
+
+    <main>
+
+        <section class="hero" id="home">
+
+            <div class="container">
+
+                <div class="hero-grid">
+
+                    <div>
+
+                        <div class="eyebrow">
+                            <span></span>
+                            Established in 2025
+                        </div>
+
+                        <h1>
+                            For animals.<br>
+                            For people.<br>
+                            <span class="accent">For welfare.</span>
+                        </h1>
+
+                        <p class="hero-subtitle">
+                            VEGANFARM is an independent animal and human welfare
+                            movement working to support rescuers across India
+                            and expand access to education.
+                        </p>
+
+                        <div class="hero-buttons">
+                            <a href="#projects" class="btn btn-primary">
+                                Explore Our Work
+                            </a>
+
+                            <a href="#contact" class="btn btn-secondary">
+                                Get in Touch
+                            </a>
+                        </div>
+
+                    </div>
+
+
+                    <div class="hero-card">
+
+                        <!-- Replace this file with your uploaded VEGANFARM logo -->
+                        <img
+                            src="logo.png"
+                            alt="VEGANFARM Logo"
+                            class="hero-logo"
+                        >
+
+                    </div>
+
+                </div>
+
+            </div>
+
+        </section>
+
+
+        <!-- ABOUT -->
+
+        <section class="about" id="about">
+
+            <div class="container">
+
+                <div class="about-grid">
+
+                    <div class="about-visual">
+                        <div class="about-circle">
+                            VEGANFARM
+                        </div>
+                    </div>
+
+                    <div class="about-text">
+
+                        <div class="section-label">
+                            About VEGANFARM
+                        </div>
+
+                        <h2 class="section-title">
+                            Turning concern into meaningful action.
+                        </h2>
+
+                        <p>
+                            VEGANFARM is an independent animal and human welfare
+                            movement established in 2025 by Harshit Dedhia.
+                        </p>
+
+                        <p>
+                            Our work currently focuses on two areas:
+                            supporting animal rescuers across India through
+                            funding assistance, and providing free online
+                            English education to students in aashrams in
+                            Mumbai and Virar.
+                        </p>
+
+                        <p>
+                            We aim to build practical support systems that
+                            connect people who want to help with genuine
+                            welfare and educational needs.
+                        </p>
+
+                        <div class="founder-card">
+                            <strong>Harshit Dedhia</strong>
+                            <span>
+                                Founder · VEGANFARM · Established 2025
+                            </span>
+                        </div>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+        </section>
+
+
+        <!-- PROJECTS -->
+
+        <section class="projects" id="projects">
+
+            <div class="container">
+
+                <div class="section-heading">
+
+                    <div class="section-label">
+                        What We Do
+                    </div>
+
+                    <h2 class="section-title">
+                        Two projects. One purpose.
+                    </h2>
+
+                    <p class="section-description">
+                        VEGANFARM currently focuses its work on animal rescue
+                        support and accessible education.
+                    </p>
+
+                </div>
+
+
+                <div class="project-grid">
+
+                    <!-- RESCUER HELP -->
+
+                    <article class="project-card">
+
+                        <div class="project-icon icon-rescue">
+                            🐾
+                        </div>
+
+                        <h3>
+                            Rescuer Help
+                        </h3>
+
+                        <p>
+                            We support genuine animal rescuers across India
+                            through funding assistance for rescue-related needs.
+                        </p>
+
+                        <ul class="project-list">
+                            <li>Medical treatment support</li>
+                            <li>Animal food requirements</li>
+                            <li>Shelter-related needs</li>
+                            <li>Emergency rescue expenses</li>
+                            <li>Other genuine welfare requirements</li>
+                        </ul>
+
+                        <a href="#contact" class="btn btn-primary">
+                            Contact VEGANFARM
+                        </a>
+
+                    </article>
+
+
+                    <!-- AASHRAM TEACHING -->
+
+                    <article class="project-card">
+
+                        <div class="project-icon icon-education">
+                            ✦
+                        </div>
+
+                        <h3>
+                            Aashram Teaching
+                        </h3>
+
+                        <p>
+                            We provide free online English classes to students
+                            in aashrams in Mumbai and Virar.
+                        </p>
+
+                        <ul class="project-list">
+                            <li>Free English education for students</li>
+                            <li>Online classes</li>
+                            <li>Programs for aashram students</li>
+                            <li>Teacher support through available funding</li>
+                            <li>Focus on practical language development</li>
+                        </ul>
+
+                        <a href="#contact" class="btn btn-secondary">
+                            Learn More
+                        </a>
+
+                    </article>
+
+                </div>
+
+            </div>
+
+        </section>
+
+
+        <!-- HOW YOU CAN HELP -->
+
+        <section id="help">
+
+            <div class="container">
+
+                <div class="section-heading">
+
+                    <div class="section-label">
+                        Get Involved
+                    </div>
+
+                    <h2 class="section-title">
+                        There are many ways to help.
+                    </h2>
+
+                    <p class="section-description">
+                        If you want to contribute to animal or human welfare,
+                        contact VEGANFARM and tell us how you would like to help.
+                    </p>
+
+                </div>
+
+
+                <div class="help-grid">
+
+                    <div class="help-card">
+                        <div class="help-number">01</div>
+                        <h3>Support Rescue</h3>
+                        <p>
+                            Help support genuine animal rescue requirements
+                            through funding assistance.
+                        </p>
+                    </div>
+
+                    <div class="help-card">
+                        <div class="help-number">02</div>
+                        <h3>Support Education</h3>
+                        <p>
+                            Help sustain free educational programs and
+                            teacher support for aashram students.
+                        </p>
+                    </div>
+
+                    <div class="help-card">
+                        <div class="help-number">03</div>
+                        <h3>Offer Support</h3>
+                        <p>
+                            If you have resources, services or another form
+                            of assistance to offer, contact our team.
+                        </p>
+                    </div>
+
+                </div>
+
+            </div>
+
+        </section>
+
+
+        <!-- UPDATES -->
+
+        <section id="updates" class="projects">
+
+            <div class="container">
+
+                <div class="section-heading">
+
+                    <div class="section-label">
+                        Updates & Stories
+                    </div>
+
+                    <h2 class="section-title">
+                        Follow the work as it grows.
+                    </h2>
+
+                    <p class="section-description">
+                        This section will feature future rescue cases,
+                        educational activities, campaigns and VEGANFARM
+                        updates.
+                    </p>
+
+                </div>
+
+                <div class="project-card">
+
+                    <h3>
+                        More updates coming soon.
+                    </h3>
+
+                    <p>
+                        VEGANFARM will use this space to share information
+                        about ongoing work and supported initiatives.
+                    </p>
+
+                    <a href="#contact" class="btn btn-primary">
+                        Contact Us
+                    </a>
+
+                </div>
+
+            </div>
+
+        </section>
+
+
+        <!-- CONTACT -->
+
+        <section class="contact" id="contact">
+
+            <div class="container">
+
+                <div class="contact-grid">
+
+                    <div>
+
+                        <div class="section-label">
+                            Contact VEGANFARM
+                        </div>
+
+                        <h2 class="section-title">
+                            Want to support the work?
+                        </h2>
+
+                        <p class="section-description">
+                            If you want to donate, support an animal rescue,
+                            contribute to education, or offer any other form
+                            of assistance, contact us by email.
+                        </p>
+
+                    </div>
+
+
+                    <div class="email-box">
+
+                        <div class="email-label">
+                            Official Contact Email
+                        </div>
+
+                        <a
+                            href="mailto:veganfarmmovement@gmail.com"
+                            class="email"
+                        >
+                            veganfarmmovement@gmail.com
+                        </a>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+        </section>
+
+    </main>
+
+
+    <!-- FOOTER -->
+
+    <footer>
+
+        <div class="container">
+
+            <div class="footer-inner">
+
+                <div>
+                    <div class="footer-brand">
+                        VEGANFARM
+                    </div>
+
+                    <div class="footer-small">
+                        Animal & Human Welfare Movement
+                    </div>
+                </div>
+
+                <div class="footer-small">
+                    © 2025 VEGANFARM. All rights reserved.
+                </div>
+
+            </div>
+
+        </div>
+
+    </footer>
+
+
+    <!-- MOBILE MENU -->
+
+    <script>
+
+        const menuBtn = document.getElementById("menuBtn");
+        const navLinks = document.getElementById("navLinks");
+
+        menuBtn.addEventListener("click", function () {
+            navLinks.classList.toggle("active");
+        });
+
+        document.querySelectorAll(".nav-links a").forEach(function (link) {
+            link.addEventListener("click", function () {
+                navLinks.classList.remove("active");
+            });
+        });
+
+    </script>
+
+</body>
+</html>
